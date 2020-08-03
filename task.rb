@@ -40,6 +40,9 @@ def q4
 
   # 以下に回答を記載
 
+  sports = ["サッカー", "フットサル", nil, "野球", "バスケ", nil, "バレー"]
+  sports.delete(nil)
+
   # 以下は変更しないで下さい
   p sports
 end
@@ -49,6 +52,14 @@ def q5
   array2 = [1, 5, 8, 10]
 
   # 以下に回答を記載
+  
+  if array1.count == 0
+    puts "true"
+  end
+
+  if array2.count >= 1
+    puts "false"
+  end
 
 end
 
@@ -57,12 +68,19 @@ def q6
 
   # 以下に回答を記載
 
+  numbers1.each do |number|
+    p  numbers2 = number * 10
+  end
+
 end
 
 def q7
   array = ["1", "2", "3", "4", "5"]
 
   # 以下に回答を記載
+
+  integers = array.map(&:to_i)
+  p integers
 
   # 以下は変更しないで下さい
   p array

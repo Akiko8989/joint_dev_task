@@ -41,7 +41,7 @@ def q4
   # 以下に回答を記載
 
   sports = ["サッカー", "フットサル", nil, "野球", "バスケ", nil, "バレー"]
-  sports.delete(nil)
+  sports.compact!
 
   # 以下は変更しないで下さい
   p sports
@@ -53,13 +53,9 @@ def q5
 
   # 以下に回答を記載
   
-  if array1.count == 0
-    puts "true"
-  end
+  puts array1.empty?
 
-  if array2.count >= 1
-    puts "false"
-  end
+  puts array2.empty?
 
 end
 
@@ -68,9 +64,13 @@ def q6
 
   # 以下に回答を記載
 
-  numbers1.each do |number|
-    p  numbers2 = number * 10
-  end
+   numbers2 = numbers1.map do |number|
+    number * 10
+   end  
+   puts numbers2
+
+   numbers2 = numbers1.map {|number| number * 10}
+   puts numbers2
 
 end
 
@@ -79,8 +79,7 @@ def q7
 
   # 以下に回答を記載
 
-  integers = array.map(&:to_i)
-  p integers
+  array.map!(&:to_i)
 
   # 以下は変更しないで下さい
   p array
@@ -91,6 +90,9 @@ def q8
 
   # 以下に回答を記載
 
+  programming_languages = programming_languages.map(&:capitalize) 
+  upper_case_programming_languages =  programming_languages.map(&:upcase)
+
   # 以下は変更しないで下さい
   p programming_languages
   p upper_case_programming_languages
@@ -100,6 +102,10 @@ def q9
   names = ["田中", "佐藤", "佐々木", "高橋"]
 
   # 以下に回答を記載
+
+  names.each.with_index(1) do |name,i|
+    puts "会員No.#{i} #{name}さん"
+  end  
 
 end
 

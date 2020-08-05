@@ -113,7 +113,18 @@ def q10
   foods = %w(いか たこ うに しゃけ うにぎり うに軍艦 うに丼)
 
   # 以下に回答を記載
+ 
+ foods.each do |food|
+   message = food.include?("うに") 
+   puts message
+ end
 
+  if true
+    puts "好物です"
+  else
+    puts "まあまあです"
+  end
+  
 end
 
 def q11
@@ -121,12 +132,18 @@ def q11
 
   # 以下に回答を記載
 
+  sports.flatten.uniq.each.with_index(1) do |sport,i|
+    puts "No#{i} #{sport}"
+  end
+
 end
 
 def q12
   data = { user: { name: "satou", age: 33 } }
 
   # 以下に回答を記載
+
+  puts data[:user][:name]
 
 end
 

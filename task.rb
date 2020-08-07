@@ -186,7 +186,8 @@ def q15
     end
 
     #  三項演算子
-    # (data1.key?(:age)) ? (puts "OK") : (puts "NG")
+    (data1.key?(:age)) ? (puts "OK") : (puts "NG")
+    (data2.key?(:age)) ? (puts "OK") : (puts "NG")
 
 end
 

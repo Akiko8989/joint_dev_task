@@ -115,12 +115,13 @@ def q10
   # 以下に回答を記載
  
  foods.each do |food|
-   message = food.include?("うに") 
-   if message == true
+   if food.include?("うに")
     puts "好物です"
    else
     puts "まあまあです"
    end
+   #  三項演算子
+   #  (food.include?("うに")) ? (puts "好物です") : (puts "まあまあです")
  end
 
   
@@ -184,6 +185,9 @@ def q15
       puts "NG"
     end
 
+    #  三項演算子
+    # (data1.key?(:age)) ? (puts "OK") : (puts "NG")
+
 end
 
 def q16
@@ -195,6 +199,10 @@ def q16
   ]
 
   # 以下に回答を記載
+  
+  users.each do |user|
+    puts "私の名前は#{user[:name]}です。年齢は#{user[:age]}歳です。"
+  end
 
 end
 

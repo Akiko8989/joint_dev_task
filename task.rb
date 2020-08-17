@@ -264,9 +264,14 @@ end
 class Item
   # 以下を修正して下さい
 
-  def initialize(name)
+  def initialize(name:)
     @name = name
   end
+
+  def name 
+    @name
+  end
+
 end
 
 def q19
@@ -277,12 +282,33 @@ end
 
 class UserQ20
   # 以下に回答を記載
+  def initialize(name:, age:)
+    @name = name
+    @age = age
+  end
 
 end
 
 class Zoo
   # 以下に回答を記載
 
+  def initialize(name:, entry_fee:)
+    @name = name
+    @entry_fee = entry_fee
+  end
+    
+  def info_entry_fee(users)
+    if users.age > 0
+      @entry_fee = 0
+    elsif users.age >= 6
+      @entry_fee = 400
+    elsif users.age >= 13
+      @entry_fee = 800
+    else
+      @entry_fee = 500
+    end
+    puts "#{users.name}さんの入場料金は#{@entry_fee}円です。"
+  end
 end
 
 

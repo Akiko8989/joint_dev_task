@@ -300,14 +300,15 @@ class Zoo
 　　judge_cause=
       case users.age 
       when 0..5 
-        puts "#{users.name}さんの入場料金は#{@entry_fee[:infant]}円です。"
+        fee = @entry_fee[:infant]
       when 6..12
-        puts "#{users.name}さんの入場料金は#{@entry_fee[:children]}円です。"
+        fee = @entry_fee[:children]
       when 13..64
-        puts "#{users.name}さんの入場料金は#{@entry_fee[:adult]}円です。"
+        fee = @entry_fee[:adult]
       when 65..120
-        puts "#{users.name}さんの入場料金は#{@entry_fee[:senior]}円です。"
+        fee = @entry_fee[:senior]
       end    
+      puts "#{users.name}さんの入場料金は#{fee}円です。"
   end
 
 end

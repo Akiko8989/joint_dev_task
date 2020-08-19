@@ -297,7 +297,7 @@ class Zoo
   end
   
   def info_entry_fee(users)
-    　judged_fee = 
+      judged_fee = 
       case users.age 
       when 0..5 
         @entry_fee[:infant]
